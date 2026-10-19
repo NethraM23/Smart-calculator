@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SmartCalc</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <h1>SmartCalc</h1>
+        <p>Calculate and see the solution steps</p>
+
+        <input type="text" id="problem"
+               placeholder="Enter a problem" readonly>
+
+        <div class="buttons">
+
+            <button onclick="clearInput()">C</button>
+            <button onclick="deleteLast()">⌫</button>
+            <button onclick="addValue('(')">(</button>
+            <button onclick="addValue(')')">)</button>
+
+            <button onclick="addValue('7')">7</button>
+            <button onclick="addValue('8')">8</button>
+            <button onclick="addValue('9')">9</button>
+            <button onclick="addValue('/')">÷</button>
+
+            <button onclick="addValue('4')">4</button>
+            <button onclick="addValue('5')">5</button>
+            <button onclick="addValue('6')">6</button>
+            <button onclick="addValue('*')">×</button>
+
+            <button onclick="addValue('1')">1</button>
+            <button onclick="addValue('2')">2</button>
+            <button onclick="addValue('3')">3</button>
+            <button onclick="addValue('-')">−</button>
+
+            <button onclick="addValue('0')">0</button>
+            <button onclick="addValue('.')">.</button>
+            <button onclick="addValue('%')">%</button>
+            <button onclick="addValue('+')">+</button>
+
+        </div>
+
+        <button class="solve-button" onclick="solveProblem()">
+            =
+        </button>
+
+        <div class="solution">
+            <h2>Solution</h2>
+            <p id="steps">Enter a problem and click =</p>
+        </div>
+
+        <div class="history">
+            <h2>Calculation History</h2>
+
+            <div id="historyList">
+                No calculations yet.
+            </div>
+
+            <button onclick="clearHistory()">
+                Clear History
+            </button>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 30px;
+}
+
+.calculator {
+    width: 400px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.calculator > p {
+    text-align: center;
+    color: #666;
+}
+
+#problem {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 22px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.buttons button {
+    padding: 18px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: #ddd;
+}
+
+.solve-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 22px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.solution,
+.history {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 8px;
+}
+
+.solution h2,
+.history h2 {
+    margin-top: 0;
+}
+
+#historyList {
+    margin-bottom: 15px;
+}
+
+.history button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
